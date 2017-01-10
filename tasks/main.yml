@@ -1,0 +1,23 @@
+---
+
+- name: Install transmission-daemon
+  apt: name=transmission-daemon
+       state=latest
+       update_cache=yes
+
+- name: Stop transmission-daemon
+  service: name=transmission-daemon
+           state=stopped
+
+- name: Configure transmission-daemon
+  template: src=settings.json.j2
+            dest=/etc/transmission-daemon/settings.json
+            owner=debian-transmission
+            group=debian-transmission
+            mode=0600
+  notify: Reload transmission-daemon
+
+- name: Enable and start transmission-daemon
+  service: name=transmission-daemon
+           enabled=yes
+           state=started
