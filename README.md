@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This a simple role for install transmission-daemon on debian and deriative.
+This a simple role for install [transmission-daemon](https://transmissionbt.com/) on debian and deriative.
 
 Requirements
 ------------
@@ -10,6 +10,8 @@ None
 
 Role Variables
 --------------
+
+This is all the variables and theire default values allowing you to tweak you transmission-daemon installation. Those variable are the same of the regular setting.json of transmission-daemon. You can find the documentation [here](https://github.com/transmission/transmission/wiki/Editing-Configuration-Files).
 
 ```
 td_alt_speed_down: 50
@@ -111,6 +113,3 @@ License
 -------
 
 The Unlicensed
-
-Author Information
-------------------
