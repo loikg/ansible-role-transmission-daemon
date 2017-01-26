@@ -110,7 +110,7 @@ Example Playbook
 License
 -------
 
-BSD
+The Unlicensed
 
 Author Information
 ------------------
